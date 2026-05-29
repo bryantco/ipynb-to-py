@@ -1,0 +1,2 @@
+[console_scripts]
+nb_to_py = ipynb_to_py:main

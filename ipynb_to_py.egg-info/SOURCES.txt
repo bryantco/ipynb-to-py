@@ -1,0 +1,8 @@
+ipynb_to_py.py
+pyproject.toml
+ipynb_to_py.egg-info/PKG-INFO
+ipynb_to_py.egg-info/SOURCES.txt
+ipynb_to_py.egg-info/dependency_links.txt
+ipynb_to_py.egg-info/entry_points.txt
+ipynb_to_py.egg-info/requires.txt
+ipynb_to_py.egg-info/top_level.txt
