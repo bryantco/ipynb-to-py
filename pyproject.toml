@@ -1,0 +1,12 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ipynb-to-py"
+version = "0.1.0"
+description = "Convert Jupyter notebooks to Python files."
+dependencies = ["nbformat"]
+
+[project.scripts]
+nb_to_py = "ipynb_to_py:main"
