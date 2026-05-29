@@ -1,5 +1,6 @@
 import argparse
 from pathlib import Path
+from typing import Generator
 
 import nbformat
 
@@ -7,11 +8,12 @@ import nbformat
 def nb_to_py(path: str) -> None:
     nb = nbformat.read(path, as_version=4)
     code = "\n\n".join(cell.source for cell in nb.cells if cell.cell_type == "code")
-    with open(path.replace(".ipynb", ".py"), "w") as f:
+    output_path = Path(path).with_suffix(".py")
+    with open(output_path, "w") as f:
         f.write(code)
 
 
-def _iter_notebooks(target: Path):
+def _iter_notebooks(target: Path) -> Generator[Path, None, None]:
     if target.is_file() and target.suffix == ".ipynb":
         yield target
     elif target.is_dir():
