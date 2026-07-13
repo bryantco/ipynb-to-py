@@ -14,7 +14,3 @@ def nb_to_py(path: str, add_cell_markers: bool = False) -> None:
 
     with open(path.replace(".ipynb", ".py"), "w") as f:
         f.write(code)
-
-
-for nb_path in Path(".").glob("**/*.ipynb"):
-    nb_to_py(str(nb_path), add_cell_markers=True)
